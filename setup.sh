@@ -31,6 +31,12 @@ run_container_1() {
 	local i
 }
 
+
+list_containers() {
+    docker container ls -a
+}
+
+
 print_box_IP() {
 	for i in "${!BOXES[@]}"; do
 	    box_ip=$(docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' "${BOXES[i]}")
@@ -58,6 +64,7 @@ print_syntax() {
 
 main() {
     run_container_1
+	list_containers
 	print_box_IP
 	print_syntax
 }
