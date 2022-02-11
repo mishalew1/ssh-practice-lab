@@ -10,8 +10,14 @@ PORTS=(2224 2225 2226 2227 2228 2229)
 GREEN="\033[0;32m" 
 RESTORE="\033[0m" 
 
+run_containers_test() {
+    for i in "${!BOXES[@]}"; do
+        echo "${BOXES[i]} ${BOXES[i]} ${USERS[i]} ${PASSWORDS[i]} ${PORTS[i]}:2222"   \ 
+	done
+	local i
+}
 
-run_container_1() {
+run_containers() {
     for i in "${!BOXES[@]}"; do
 	docker run -d \
 		--name="${BOXES[i]}" \
@@ -49,13 +55,6 @@ print_box_IP() {
 }
 
 
-test() {
-    for i in "${!BOXES[@]}"; do
-		echo "${BOXES[i]} ${USERS[i]}"
-	done
-}
-
-
 print_syntax() {
 	echo -e "${GREEN}Syntax: 'ssh USER@IP -p PORT_NUMBER'${RESTORE}"
 	echo -e "${GREEN}Example: 'ssh Rachel@IP -p 2224'${RESTORE}"
@@ -63,7 +62,8 @@ print_syntax() {
 
 
 main() {
-    run_container_1
+	#run_containers_test
+	run_containers
 	list_containers
 	print_box_IP
 	print_syntax
