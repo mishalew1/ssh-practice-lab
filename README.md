@@ -1,2 +1,2 @@
 # ssh-practice-lab
-Teaching students how to SSH
+Mini lab to learn how SSH works
