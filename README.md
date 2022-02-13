@@ -41,7 +41,7 @@ Permissions should be set to 600 so that other users cannot see what servers you
 It uses the following syntax:
 ```
 Host easy_name
-HostName 172.17.0.2  
+    HostName 172.17.0.2  
     User rachel  
     port 2222  
     IdentityFile ~/.ssh/id_ed25519  
