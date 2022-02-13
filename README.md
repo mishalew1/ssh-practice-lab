@@ -39,9 +39,8 @@ Permissions should be set to 600 so that other users cannot see what servers you
     chmod 600 $HOME/.ssh/config
 
 It uses the following syntax:
-
-Host any_name_you_want
 ```
+Host easy_name
 HostName 172.17.0.2  
     User rachel  
     port 2222  
@@ -51,5 +50,5 @@ HostName 172.17.0.2
 This allows us to configure 100's of servers and not have to remember all the IP's, ports and different SSH keys.
 We can then log in like so:
 ```
-ssh any_name_you_want 
+ssh easy_name 
 ```
