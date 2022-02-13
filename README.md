@@ -17,16 +17,22 @@ sh install_docker.sh
 
 ### Setting up the containers
 Run the script which will spin up 6 containers
-```sh setup_containers.sh```
+```
+sh setup_containers.sh
+```
     
 ### Practice SSH 
-Once containers are setup connect to them with the following syntax
-    ssh USER@HOST -p 2222
-    ssh rachel@172.17.0.2 -p 2222
+Once containers are setup connect to them with the following syntax:
+```
+ssh USER@HOST -p 2222
+ssh rachel@172.17.0.2 -p 2222
+```
 
 Test the port is open with netcat
-    nc -zv 172.17.0.2 2222
-    
+```
+nc -zv 172.17.0.2 2222
+```
+
 ### Edit the config file
 The config file should be located or created at $HOME/.ssh/config
 Permissions should be set to 600 so that other users cannot see what servers you can access
@@ -42,4 +48,6 @@ Host any_name_you_want
     
 This allows us to configure 100's of servers and not have to remember all the IP's, ports and different SSH keys.
 We can then log in like so:
-    ssh any_name_you_want 
+```
+ssh any_name_you_want 
+```
