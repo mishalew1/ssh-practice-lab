@@ -11,7 +11,9 @@ This lab spins up 6 docker containers we can SSH into
 
 ### Installing docker
 Simply run the script like so:
-```sh install_docker.sh```
+```
+sh install_docker.sh
+```
 
 ### Setting up the containers
 Run the script which will spin up 6 containers
