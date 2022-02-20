@@ -12,13 +12,13 @@ This lab spins up 6 docker containers we can SSH into
 ### Installing docker
 Simply run the script like so:
 ```
-sh install_docker.sh
+sh 1_install_docker.sh
 ```
 
 ### Setting up the containers
 Run the script which will spin up 6 containers
 ```
-sh setup_containers.sh
+sh 2_start_containers.sh
 ```
     
 ### Practice SSH 
@@ -44,7 +44,7 @@ Host easy_name
     HostName 172.17.0.2  
     User rachel  
     port 2222  
-    IdentityFile ~/.ssh/id_ed25519  
+    IdentityFile ~/ssh-practice-lab/keys/id_rsa  
 ```
 
 This allows us to configure 100's of servers and not have to remember all the IP's, ports and different SSH keys.
