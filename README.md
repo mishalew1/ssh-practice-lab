@@ -50,5 +50,5 @@ Host rachel
 This allows us to configure 100's of servers and not have to remember all the IP's, ports and different SSH keys.
 We can then log in like so:
 ```
-ssh easy_name 
+ssh rachel
 ```
