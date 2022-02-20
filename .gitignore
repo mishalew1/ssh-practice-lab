@@ -1,1 +1,4 @@
-config/*
+config/**
+keys/**
+id_rsa*
+id_ed*
