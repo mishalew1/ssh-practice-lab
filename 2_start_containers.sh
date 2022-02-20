@@ -71,7 +71,7 @@ test_connection(){
 
 
 main() {
-    run_containers
+	run_containers
 	list_containers
 	print_box_info
 	print_syntax
