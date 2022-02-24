@@ -34,9 +34,11 @@ nc -zv 172.17.0.2 2222
 ```
 
 ### Edit the config file
-The config file should be located or created at $HOME/.ssh/config
-Permissions should be set to 600 so that other users cannot see what servers you can access
-    chmod 600 $HOME/.ssh/config
+The config file should be located or created at $HOME/.ssh/config  
+Permissions should be set to 600 so that other users cannot see what servers you can access  
+```
+chmod 600 $HOME/.ssh/config
+```
 
 It uses the following syntax:
 ```
