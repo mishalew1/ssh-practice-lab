@@ -27,6 +27,7 @@ run_containers() {
 		-p "${PORTS[i]}":2222 \
 		-v "$HOME"/ssh-practice-lab/config/config-${USERS[i]}:/config \
 		-v "$HOME"/ssh-practice-lab/motd:/etc/motd \
+		-v "$HOME"/ssh-practice-lab/profile:/etc/profile \
 		--restart unless-stopped \
 		lscr.io/linuxserver/openssh-server 2>/dev/null
 	done
@@ -71,7 +72,7 @@ test_connection(){
 
 
 main() {
-	run_containers
+    run_containers
 	list_containers
 	print_box_info
 	print_syntax
